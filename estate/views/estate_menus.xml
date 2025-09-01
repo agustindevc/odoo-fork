@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Menú principal de la app inmobiliaria -->
+    <menuitem 
+        id="menu_estate_root" 
+        name="Inmobiliaria" 
+        sequence="1"/>
+
+    <!-- Submenú para acceder a las propiedades -->
+    <menuitem 
+        id="menu_estate_property" 
+        name="Propiedades" 
+        parent="menu_estate_root" 
+        sequence="1"/>
+
+    <!-- Opción para ver todas las propiedades -->
+    <menuitem 
+        id="menu_estate_property_list" 
+        name="Todas las Propiedades" 
+        parent="menu_estate_property" 
+        action="action_estate_property" 
+        sequence="1"/>
+
+    <!-- Menú de configuración (solo administradores) -->
+    <menuitem 
+        id="menu_estate_settings"
+        name="Settings"
+        parent="menu_estate_root"
+        sequence="100"
+        groups="base.group_system"/>
+
+    <!-- Tipos de propiedad configurables -->
+    <menuitem 
+        id="menu_property_type"
+        name="Property Types"
+        parent="menu_estate_settings"
+        action="action_property_type"
+        sequence="10"/>
+
+    <!-- Etiquetas de propiedad configurables -->
+    <menuitem 
+        id="menu_property_tag"
+        name="Property Tags"
+        parent="menu_estate_settings"
+        action="action_property_tag"
+        sequence="20"/>
+
+</odoo>

@@ -1,0 +1,27 @@
+<!--Acción y menú personalizados para gestionar usuarios-->
+<odoo>
+  <!-- Acción para abrir la gestión de usuarios -->
+  <record id="action_res_users_estate" model="ir.actions.act_window">
+    <field name="name">Usuarios</field>
+    <field name="res_model">res.users</field>
+    <field name="view_mode">list,form</field>
+    <field name="context">{}</field>
+    <!-- Vista de lista por defecto -->
+    <field name="view_id" ref="base.view_users_tree"/>
+  </record>
+  <!-- Secuencia de vistas: lista y luego formulario completo -->
+  <record id="action_res_users_estate_view1" model="ir.actions.act_window.view">
+    <field eval="10" name="sequence"/>
+    <field name="view_mode">list</field>
+    <field name="view_id" ref="base.view_users_tree"/>
+    <field name="act_window_id" ref="action_res_users_estate"/>
+  </record>
+  <record id="action_res_users_estate_view2" model="ir.actions.act_window.view">
+    <field eval="20" name="sequence"/>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="base.view_users_form"/>
+    <field name="act_window_id" ref="action_res_users_estate"/>
+  </record>
+  <!-- Menú para acceder a la lista de usuarios desde la app inmobiliaria -->
+  <menuitem id="menu_users_root_estate" name="Usuarios" parent="estate.menu_estate_root" sequence="100" action="action_res_users_estate"/>
+</odoo>

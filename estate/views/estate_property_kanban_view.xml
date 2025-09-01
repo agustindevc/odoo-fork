@@ -1,0 +1,43 @@
+<odoo>
+    <!-- Vista kanban personalizada para propiedades -->
+    <record id="estate_property_kanban_view" model="ir.ui.view">
+        <field name="name">estate.property.kanban</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+
+            <!-- Agrupa por tipo de propiedad y desactiva opciones de arrastrar -->
+            <kanban default_group_by="property_type_id" disable_column_drag="1" disable_drag_and_drop="1" record_draggable="false" group_draggable="false">
+                <field name="state"/>
+                <field name="expected_price"/>
+                <field name="best_offer"/>
+                <field name="selling_price"/>
+                <field name="tag_ids"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <!-- Tarjeta individual de propiedad -->
+                        <div>
+                            <strong><field name="name"/></strong>
+                            <div>Precio esperado: <field name="expected_price"/></div>
+                            <div>
+                                <!-- Muestra mejor oferta solo si hay ofertas recibidas -->
+                                <t t-if="record.state.raw_value == 'offer_received'">
+                                    Mejor precio: <t t-esc="record.best_offer.value"/>
+                                </t>
+                            </div>
+                            <div>
+                                <!-- Muestra precio de venta solo si la oferta fue aceptada -->
+                                <t t-if="record.state.raw_value == 'offer_accepted'">
+                                    Precio de venta: <t t-esc="record.selling_price.value"/>
+                                </t>
+                            </div>
+                            <div>
+                                <!-- Etiquetas asociadas a la propiedad -->
+                                <field name="tag_ids" widget="many2many_tags"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>

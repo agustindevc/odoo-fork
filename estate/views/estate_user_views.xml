@@ -1,0 +1,32 @@
+<!--Vista heredada para extender el formulario completo de usuarios-->
+<odoo>
+  <record id="view_users_form_inherit_estate" model="ir.ui.view">
+    <field name="name">res.users.form.inherit.estate</field>
+    <field name="model">res.users</field>
+    <!-- Hereda el formulario completo de usuarios -->
+    <field name="inherit_id" ref="base.view_users_form"/>
+    <!-- Prioridad alta para asegurar que la pestaña personalizada se aplique -->
+    <field name="priority" eval="100"/>
+    <field name="arch" type="xml">
+      <!-- Inserta la pestaña dentro del notebook principal del formulario -->
+      <notebook position="inside">
+        <!-- Pestaña personalizada: muestra las propiedades a la venta del usuario -->
+        <page string="Propiedades a la venta">
+          <!-- Lista de propiedades asociadas al usuario -->
+          <field name="property_ids">
+            <list>
+              <field name="name" string="Título"/>
+              <field name="property_type_id" string="Tipo de Propiedad"/>
+              <field name="postcode" string="Código Postal"/>
+              <field name="tag_ids" string="Etiquetas"/>
+              <field name="bedrooms" string="Dormitorios"/>
+              <field name="living_area" string="Superficie (m²)"/>
+              <field name="expected_price" string="Precio Esperado"/>
+              <field name="selling_price" string="Precio de Venta"/>
+            </list>
+          </field>
+        </page>
+      </notebook>
+    </field>
+  </record>
+</odoo>
