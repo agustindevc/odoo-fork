@@ -1,0 +1,41 @@
+* [33m40aeb96b9fd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtutorials[m[33m, [m[1;31morigin/tutorials[m[33m)[m Add tutorial modules estate and estate_account
+* [33mb9a1475839c[m Add tutorial modules estate and estate_account
+* [33m48978da32c0[m[33m ([m[1;31morigin/HEAD[m[33m, [m[1;31morigin/18.0[m[33m, [m[1;32m18.0[m[33m)[m [FIX] core: upgrade company-dependent override
+* [33m5693f53ff7d[m [FIX] pos_sale: fix faling test_quantity_updated_settle test
+* [33m30f6f2b08e5[m [FIX] mrp: keep owner_id when unbuilding MO
+* [33mfcdd78377a5[m [FIX] web: fix crash when `type_` is missing in `_view_info`
+* [33mdb0c9c70379[m [FIX] html_editor: fix non-deterministic test failure
+* [33m5ead05eb264[m [FIX] point_of_sale: Fix mobile vertical scroll on product screen
+* [33m95d899da2e5[m [FIX] account: allow sorting of invoices by Status and Sent fields
+* [33m632dc02d4a8[m [FIX] calendar: correct selectivity in alarm query
+* [33m39b59295799[m [FIX] point_of_sale: random failure test_barcode_search_attributes_prese
+* [33maf36e73108c[m [FIX] resource, hr_work_entry_contract_attendance : Fetch attendance for flexible since start_date not monday
+* [33m6bf75265a4c[m [FIX] account, l10n_es: remove user_groupby when using external engine
+* [33m6819a805d07[m [FIX] account: Fix custom tax amounts from tax lines in Portugal
+* [33mfdb37c9aa3d[m [FIX] l10n_sa,l10n_sa_edi: Fixed Phase 1 QR code disappearing
+* [33m8007d56c45d[m [FIX] base_geolocalize: fix crash when computing geolocation for unnamed partner
+* [33m7fc1ebd4466[m [FIX] base: fallback to individual PDF generation when outline split fails
+* [33mba7217c2422[m [I18N] *: fetch translation updates
+* [33m6fe1ad26f71[m [FIX] base: Use mimetype of fixed file name.
+* [33ma2ca087c24d[m [FIX] purchase: select supplier info based on min_qty if same vendor
+* [33md8c3a589fc0[m [FIX] mail: send correct access values in _thread_to_store
+* [33m8b37bbe17a2[m [FIX] sale_pdf_quote_builder: show zero values in quotation docs
+* [33m86f23be9033[m [FIX] sale_stock: change MO packaging upon SOL qty update
+* [33meb72fa71002[m [IMP] l10n_sa_edi: separate private key for branch from parent
+* [33me43fdabe46c[m [FIX] point_of_sale: invoice order with rounding after closure
+* [33mc840bdedb99[m [FIX] mail: show display_name for contact without name and email
+* [33m18d05b1d27a[m [FIX] l10n_fr_hr_holidays: improve time-off duration calculation
+* [33m03568320410[m [FIX] l10n_es: add mod 303 art 22, 23 and 24
+* [33m98e2aa4e1d5[m [FIX] calendar: test_calendar_res_id_fallback_when_res_id_is_0
+* [33m415456a308c[m [FIX] hr_holidays: skip public holidays in leave calculation for flexible hours
+* [33mced1335c388[m [FIX] sale: unit price not recomputed from pricelist on quantity change
+* [33m4cb0ab48c39[m [FIX] mail, *: sync rating popup composer and chatter
+* [33m1dc3eb59875[m [FIX] l10n_es_edi_facturae: Allow internal users to send invoices with facturae
+* [33mb350537e857[m [FIX] account: reset sending data for canceled invoices
+* [33m23e63f4394c[m [PERF] mail: Disable prefetching of unneeded fields
+* [33m587e7a10eaa[m [IMP] l10n_ro: Add new taxes and tax groups
+* [33mbd1d93bbb50[m [FIX] project: use line balance for profitability items caculation
+* [33md7577430f22[m [FIX] stock: correct demo address from incoming return slips
+* [33m593f549f59a[m [I18N] *: fetch translation updates
+* [33mba15d2f79b5[m [I18N] *: export 18.0 source terms
+* [33m2583a09ba46[m [FIX] l10n_es_edi_verifactu{,_pos}: misc fixes
