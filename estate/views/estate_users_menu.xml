@@ -25,5 +25,3 @@
   <!-- Menú para acceder a la lista de usuarios desde la app inmobiliaria -->
   <menuitem id="menu_users_root_estate" name="Usuarios" parent="estate.menu_estate_root" sequence="100" action="action_res_users_estate"/>
 </odoo>
-
-prueba
